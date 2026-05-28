@@ -1,0 +1,33 @@
+BLOCK
+  DECL(a)
+    NUM(10)
+  DECL(b)
+    NUM(5)
+  DECL(sum)
+    ADD
+      ADD
+        ID(a)
+        ID(b)
+      NUM(2)
+  IF
+    ADD
+      ID(a)
+      ID(b)
+    BLOCK
+      PRINT
+        STRING("Inside If:")
+        ID(sum)
+    BLOCK
+      PRINT
+        STRING("Inside Else:")
+        ID(a)
+  WHILE
+    ID(a)
+    BLOCK
+      PRINT
+        STRING("Loop:")
+        ID(a)
+      ASSIGN(a)
+        ADD
+          ID(a)
+          NUM(-1)
